@@ -5,6 +5,8 @@ Introducing the remarkable "Brutopia" bootstrap theme, a captivating blend of re
 
 * * *
 
+### [Preview](https://rajnandan1.github.io/brutopia/dist/index.html)
+
 ## About
 
 Brutopia embodies the essence of simplicity and raw aesthetic, drawing inspiration from the bold and unapologetic style of neo-brutalism while prioritizing exceptional readability.
@@ -16,4 +18,12 @@ The deliberate use of minimalistic typography, generous whitespace, and striking
 
 ## Installation
 
-Replace bootstrap with the below css file
+Instead of Using the default bootstrap CSS include the below CSS file 
+
+
+```html
+<link href="https://cdn.jsdelivr.net/gh/rajnandan1/brutopia@0.0.1/dist/assets/compiled/css/app.css" rel="stylesheet" crossorigin="anonymous">
+```
+
+Rest everything is same
+
