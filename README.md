@@ -15,3 +15,5 @@ The deliberate use of minimalistic typography, generous whitespace, and striking
  
 
 ## Installation
+
+Replace bootstrap with the below css file
