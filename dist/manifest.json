@@ -1,0 +1,114 @@
+{
+  "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/compiled/fonts/bootstrap-icons.woff2",
+    "src": "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "app.css": {
+    "file": "assets/compiled/css/app.css",
+    "src": "app.css"
+  },
+  "assets/static/images/faces/1.jpg": {
+    "file": "assets/compiled/jpg/1.jpg",
+    "src": "assets/static/images/faces/1.jpg"
+  },
+  "assets/static/images/faces/2.jpg": {
+    "file": "assets/compiled/jpg/2.jpg",
+    "src": "assets/static/images/faces/2.jpg"
+  },
+  "assets/static/images/faces/3.jpg": {
+    "file": "assets/compiled/jpg/3.jpg",
+    "src": "assets/static/images/faces/3.jpg"
+  },
+  "assets/compiled/png/favicon.png": {
+    "file": "assets/compiled/png/favicon.png",
+    "src": "assets/compiled/png/favicon.png"
+  },
+  "assets/static/images/logo/favicon.svg": {
+    "file": "assets/compiled/svg/favicon.svg",
+    "src": "assets/static/images/logo/favicon.svg"
+  },
+  "assets/compiled/png/logo_transparent.png": {
+    "file": "assets/compiled/png/logo_transparent.png",
+    "src": "assets/compiled/png/logo_transparent.png"
+  },
+  "assets/static/images/samples/1.png": {
+    "file": "assets/compiled/png/1.png",
+    "src": "assets/static/images/samples/1.png"
+  },
+  "assets/static/images/samples/2.png": {
+    "file": "assets/compiled/png/2.png",
+    "src": "assets/static/images/samples/2.png"
+  },
+  "assets/static/images/samples/3.png": {
+    "file": "assets/compiled/png/3.png",
+    "src": "assets/static/images/samples/3.png"
+  },
+  "assets/static/images/samples/4.png": {
+    "file": "assets/compiled/png/4.png",
+    "src": "assets/static/images/samples/4.png"
+  },
+  "assets/static/images/samples/architecture1.jpg": {
+    "file": "assets/compiled/jpg/architecture1.jpg",
+    "src": "assets/static/images/samples/architecture1.jpg"
+  },
+  "assets/static/images/samples/banana.jpg": {
+    "file": "assets/compiled/jpg/banana.jpg",
+    "src": "assets/static/images/samples/banana.jpg"
+  },
+  "assets/static/images/samples/bg-mountain.jpg": {
+    "file": "assets/compiled/jpg/bg-mountain.jpg",
+    "src": "assets/static/images/samples/bg-mountain.jpg"
+  },
+  "assets/static/images/samples/building.jpg": {
+    "file": "assets/compiled/jpg/building.jpg",
+    "src": "assets/static/images/samples/building.jpg"
+  },
+  "assets/static/images/samples/jump.jpg": {
+    "file": "assets/compiled/jpg/jump.jpg",
+    "src": "assets/static/images/samples/jump.jpg"
+  },
+  "assets/static/images/samples/motorcycle.jpg": {
+    "file": "assets/compiled/jpg/motorcycle.jpg",
+    "src": "assets/static/images/samples/motorcycle.jpg"
+  },
+  "assets/static/images/samples/origami.jpg": {
+    "file": "assets/compiled/jpg/origami.jpg",
+    "src": "assets/static/images/samples/origami.jpg"
+  },
+  "assets/static/images/samples/water.jpg": {
+    "file": "assets/compiled/jpg/water.jpg",
+    "src": "assets/static/images/samples/water.jpg"
+  },
+  "assets/static/images/svg-loaders/audio.svg": {
+    "file": "assets/compiled/svg/audio.svg",
+    "src": "assets/static/images/svg-loaders/audio.svg"
+  },
+  "assets/static/images/svg-loaders/ball-triangle.svg": {
+    "file": "assets/compiled/svg/ball-triangle.svg",
+    "src": "assets/static/images/svg-loaders/ball-triangle.svg"
+  },
+  "assets/static/images/svg-loaders/circles.svg": {
+    "file": "assets/compiled/svg/circles.svg",
+    "src": "assets/static/images/svg-loaders/circles.svg"
+  },
+  "assets/static/images/svg-loaders/grid.svg": {
+    "file": "assets/compiled/svg/grid.svg",
+    "src": "assets/static/images/svg-loaders/grid.svg"
+  },
+  "assets/static/images/svg-loaders/hearts.svg": {
+    "file": "assets/compiled/svg/hearts.svg",
+    "src": "assets/static/images/svg-loaders/hearts.svg"
+  },
+  "assets/static/images/svg-loaders/oval.svg": {
+    "file": "assets/compiled/svg/oval.svg",
+    "src": "assets/static/images/svg-loaders/oval.svg"
+  },
+  "assets/static/images/svg-loaders/puff.svg": {
+    "file": "assets/compiled/svg/puff.svg",
+    "src": "assets/static/images/svg-loaders/puff.svg"
+  },
+  "assets/static/images/svg-loaders/rings.svg": {
+    "file": "assets/compiled/svg/rings.svg",
+    "src": "assets/static/images/svg-loaders/rings.svg"
+  }
+}
