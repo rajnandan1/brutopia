@@ -1,12 +1,18 @@
-BRUTOPIA
+<h1 align="center">BRUTOPIA</h1>
+
+<p align="center">
+<img src="screenshots/slideshow.gif" style="width:100%" /> 
+</p>
+<p align="center">Introducing the remarkable "Brutopia" bootstrap theme, a captivating blend of readability and neo-brutalist design principles..</p>
+<div align="center">
+
+
 ========
 
-Introducing the remarkable "Brutopia" bootstrap theme, a captivating blend of readability and neo-brutalist design principles.
-
+<h2 align="center">
+	<a href="https://rajnandan1.github.io/brutopia/dist/index.html">Demo Page</a>
+</h2>
 * * *
-
-### [Preview](https://rajnandan1.github.io/brutopia/dist/index.html)
-
 ## About
 
 Brutopia embodies the essence of simplicity and raw aesthetic, drawing inspiration from the bold and unapologetic style of neo-brutalism while prioritizing exceptional readability.
@@ -22,7 +28,7 @@ Instead of Using the default bootstrap CSS include the below CSS file
 
 
 ```html
-<link href="https://cdn.jsdelivr.net/gh/rajnandan1/brutopia@0.0.1/dist/assets/compiled/css/app.css" rel="stylesheet" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/gh/rajnandan1/brutopia@latest/dist/assets/compiled/css/app.css" rel="stylesheet" crossorigin="anonymous">
 ```
 
 Rest everything is same
