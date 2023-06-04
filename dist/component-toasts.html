@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Breadcrumb - Brutopia</title>
+    <title>Toasts - Brutopia</title>
 
     
 
@@ -77,7 +77,7 @@
                     >
                   </li>
 
-                  <li class="submenu-item active">
+                  <li class="submenu-item">
                     <a href="component-breadcrumb.html" class="submenu-link"
                       >Breadcrumb</a
                     >
@@ -133,7 +133,7 @@
                     >
                   </li>
 
-                  <li class="submenu-item">
+                  <li class="submenu-item ">
                     <a href="component-progress.html" class="submenu-link"
                       >Progress</a
                     >
@@ -145,7 +145,7 @@
                     >
                   </li>
 
-                  <li class="submenu-item">
+                  <li class="submenu-item active">
                     <a href="component-toasts.html" class="submenu-link"
                       >Toasts</a
                     >
@@ -302,89 +302,65 @@
           </nav>
         </header>
         <div id="main-content">
-          <div class="page-heading">
-            <div class="page-title">
-              <div class="row">
-                <div class="col-12 col-md-6 order-md-1 order-last">
-                  <h3>Breadcrumb</h3>
-                  <p class="text-subtitle text-muted">
-                    Indicate the current page’s location within a navigational
-                    hierarchy that automatically adds separators via CSS.
-                  </p>
-                </div>
-              </div>
+<div class="page-heading">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Toast</h3>
+                <p class="text-subtitle text-muted">Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.</p>
             </div>
-            <section class="section">
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title">Default</h4>
-                </div>
-                <div class="card-body">
-                  <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item active" aria-current="page">
-                        Home
-                      </li>
-                    </ol>
-                  </nav>
-
-                  <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">
-                        Library
-                      </li>
-                    </ol>
-                  </nav>
-
-                  <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">Library</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">
-                        Data
-                      </li>
-                    </ol>
-                  </nav>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title">Position</h4>
-                </div>
-                <div class="card-body">
-                  <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">Library</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">
-                        Data
-                      </li>
-                    </ol>
-                  </nav>
-                  <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb breadcrumb-center">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">Library</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">
-                        Data
-                      </li>
-                    </ol>
-                  </nav>
-                  <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb breadcrumb-right">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">Library</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">
-                        Data
-                      </li>
-                    </ol>
-                  </nav>
-                </div>
-              </div>
-            </section>
-          </div>
         </div>
+    </div>
+    <section class="section">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Basic Toasts</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <rect width="100%" height="100%" fill="#007aff"></rect>
+                                </svg>
+                                <strong class="me-auto">Bootstrap</strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">Hello, world! This is a toast message.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Open Toast Buttons</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Click the button to show toasts.</p>
+                        <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-header">
+                                    <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <rect width="100%" height="100%" fill="#007aff"></rect>
+                                    </svg>
+                                    <strong class="me-auto">Bootstrap</strong>
+                                    <small>11 mins ago</small>
+                                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                                <div class="toast-body">Hello, world! This is a toast message.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
         <footer>
           <div class="footer clearfix mb-0 text-muted">
             <div class="float-start">
@@ -407,5 +383,16 @@
     <script src="assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 
     <script src="assets/compiled/js/app.js"></script>
+	<script>
+    const toastTrigger = document.getElementById("liveToastBtn");
+    const toastLiveExample = document.getElementById("liveToast");
+    if (toastTrigger) {
+        toastTrigger.addEventListener("click", () => {
+            const toast = new bootstrap.Toast(toastLiveExample);
+
+            toast.show();
+        });
+    }
+</script>
   </body>
 </html>
