@@ -4,11 +4,7 @@
 <img src="screenshots/slideshow.gif" style="width:100%" /> 
 </p>
 <p align="center">Introducing the remarkable "Brutopia" bootstrap theme, a captivating blend of readability and neo-brutalist design principles..</p>
-<div align="center">
-
-
-========
-
+----
 <h2 align="center">
 	<a href="https://rajnandan1.github.io/brutopia/dist/index.html">Demo Page</a>
 </h2>
