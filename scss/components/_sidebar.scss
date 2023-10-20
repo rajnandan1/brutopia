@@ -1,0 +1,233 @@
+@mixin sidebar-active {
+    .sidebar-wrapper {
+        left: 0;
+    }
+    & ~ #main {
+        margin-left: 300px;
+    }
+}
+@mixin sidebar-inactive {
+    .sidebar-wrapper {
+        left: -300px;
+    }
+    & ~ #main {
+        margin-left: 0;
+    }
+}
+
+#sidebar {
+    @include sidebar-inactive();
+    
+    @media screen and (min-width: 1200px) {
+        @include sidebar-active();
+    }
+
+    &.inactive {
+        @include sidebar-inactive();
+    }
+
+    &.active {
+        .sidebar-wrapper {
+            left: 0;
+        }
+    }
+    
+}
+.sidebar-wrapper {
+    width: 275px;
+    height: 100vh;
+	border-right: 2px solid $primary;
+	height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    overflow-y: auto;
+   background-color:  $body-bg;
+    bottom: 0;
+    transition: left .7s cubic-bezier(0.22, 1, 0.36, 1);
+    .sidebar-header {
+        padding: 2rem 2rem 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+
+        img {
+            height: 2rem;
+        }
+    }
+    .sidebar-toggler.x {
+        position: absolute;
+        right: 1.75rem;
+        top: .25rem;
+        display:none;
+    }
+
+    .menu {
+        padding-left: 0;
+        margin-top: 2rem;
+        padding: 0 2rem;
+        font-weight: 600;
+        .sidebar-title {
+            padding: 0 1rem;
+            margin: 1.5rem 0 1rem;
+            font-size: 1rem;
+            list-style: none;
+            font-weight: 600;
+            color:  $sidebar-link-color;
+			font-weight: 800;
+        }
+        
+        .sidebar-link {
+            display: block;
+            padding: .7rem 1rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            border-radius: .5rem;
+            transition: all .5s;
+            text-decoration: none;
+            color: $sidebar-link-color;
+            svg,i {
+                color:$black;
+            }
+            i:before {
+                vertical-align: top;
+            }
+            span {
+                margin-left: 1rem;
+            }
+            &:hover {
+                background-color: $sidebar-link-hover-bg;
+            }
+        }
+        .sidebar-item {
+            list-style: none;
+            margin-top: .5rem;
+            position: relative;
+            
+            &.active {
+                &.has-sub {
+                    .sidebar-link:after {
+                        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9" style="fill:none;stroke:white;stroke-width:1"></polyline></svg>');
+                    }
+                }
+                >.sidebar-link {
+                    background-color: $black;
+                    span {
+                        color: #fff;
+                    }
+                    svg,i {
+                        fill: white;
+                        color:white;
+                    }
+
+                    &.has-sub:after {
+                        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9" style="fill:none;stroke:white;stroke-width:1"></polyline></svg>');
+                    }
+                }
+            }
+        }
+        .submenu {
+            list-style: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: all .5s;
+            // animation: max-height 2s cubic-bezier(0.22, 1, 0.36, 1);
+            &.active {
+                height: var(--submenu-height);
+                display: block;
+				 
+            }
+            &.submenu-closed {
+                max-height: 0;
+            }
+            &.submenu-open {
+                max-height: var(--submenu-height);
+            }
+            .submenu-item {
+                &.active {
+                    position:relative;
+                    & > a {
+                        color: $black;
+                        font-weight: bold;
+                    }
+					& > a::before {
+						content: "•";
+                        color: $primary;
+						position: absolute;
+						font-size: 2rem;
+						top: -0.2rem;
+						left: .75rem;
+					}
+                }
+                a {
+                    padding: .7rem 2rem;
+                    display: block;
+                    color: $sidebar-submenu-color;
+                    font-size: .85rem;
+                    font-weight: 600;
+                    letter-spacing: .5px;
+                    transition: all .3s;
+                    &:hover {
+                        color: $sidebar-submenu-hover-color;
+						background-color: $sidebar-link-hover-bg;
+						border-radius: .5rem;
+                    }
+					
+                }
+            }
+            
+        }
+    }
+}
+@mixin caret {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9" style="fill:none;stroke:black;stroke-width:1"></polyline></svg>');
+    position: absolute;
+    color: #ccc;
+    right: 15px;
+    top: 12px;
+    display:block;
+}
+.sidebar-item.has-sub, .submenu-item.has-sub {
+    overflow: hidden;
+    position: relative;
+}
+.sidebar-item.has-sub > .sidebar-link:after {
+    @include caret()
+}
+.submenu-item.has-sub > .submenu-link:after {
+    @include caret()
+}
+.sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+@media screen and (max-width: 1199px) {
+    .sidebar-wrapper {
+        position: fixed;
+        left: -300px;
+        .sidebar-toggler.x  {
+            display:block;
+        }
+    }
+}
+@keyframes slideDown {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: var(--submenu-height)
+    }
+}
+@keyframes slideUp {
+    from {
+        max-height: var(--submenu-height)
+    }
+    to {
+        max-height: 0;
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "name": "brutopia",
+    "version": "1.0.0",
+    "description": "A bootstrap theme on neo-brutalist design principles",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon --watch scss/ --exec 'npx webpack && node preview.js'",
+        "build-scss": "node-sass ./scss/app.scss ./dist/assets/compiled/css/app.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rajnandan1/brutopia.git"
+    },
+    "author": "Raj Nandan Sharma",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/rajnandan1/brutopia/issues"
+    },
+    "homepage": "https://github.com/rajnandan1/brutopia#readme",
+    "dependencies": {
+        "bootstrap": "^5.3.2",
+        "bootstrap-icons": "^1.11.1",
+        "css-loader": "^6.8.1",
+        "express": "^4.18.2"
+    },
+    "devDependencies": {
+        "mini-css-extract-plugin": "^2.7.6",
+        "node-sass": "^9.0.0",
+        "nodemon": "^3.0.1",
+        "sass": "^1.69.4",
+        "sass-loader": "^13.3.2",
+        "style-loader": "^3.3.3",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4"
+    }
+}

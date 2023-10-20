@@ -1,0 +1,260 @@
+.form-control {
+	border-color: $primary;
+	border-width: 2px;
+	border-radius: 8px;
+}
+.form-control:focus{
+	border-color: $primary;
+}
+.form-group {
+    margin-bottom: .7rem;
+    label {
+        color: $form-label-color;
+        font-weight: 600;
+    }
+    small {
+        font-size: .7rem;
+    }
+
+    &.with-title {
+        position: relative;
+        label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5px;
+            font-size: .6rem;
+            background-color: $form-textarea-title-bg;
+            width: 100%;
+            border-width: 1px 1px 0 1px;
+            border-style: solid;
+            border-color: lighten($input-border-color, 5%);
+            transition: $input-transition;
+        }
+        .form-control, dataTable-input {
+            padding-top: 2rem;
+			
+            &:focus ~ label {
+                border-left: 1px solid map-get($theme-colors, 'primary');
+                border-top: 1px solid map-get($theme-colors, 'primary');
+                border-right: 1px solid map-get($theme-colors, 'primary');
+            }
+        }
+    }
+
+    &[class*="has-icon-"] {
+        &.has-icon-left {
+            .form-control {
+                padding-left: 2.5rem;
+            }
+            .form-control-icon {
+                left: 0;
+            }
+        }
+        &.has-icon-right {
+            .form-control {
+                padding-right: 2.5rem;
+            }
+            .form-control-icon {
+                right: 0;
+            }
+        }
+        .form-control {            
+            &:focus ~ .form-control-icon {
+                i, svg {
+                    color: #5A8DEE
+                }
+            }
+            &.form-control-xl {
+                padding-left: 3rem;
+                & ~ .form-control-icon i{
+                    font-size: 1.6rem;
+                    &:before {
+                        color: #a6a8aa
+                    }
+                }
+            }
+        }
+        .form-control-icon {
+            position: absolute;
+            padding: 0 .6rem;
+            i, svg {
+                width: 1.2rem;
+                color: $input-placeholder-color;
+                font-size: 1.2rem;
+                &:before {
+                    vertical-align: sub;
+                }
+            }
+        }
+
+    }
+
+    &.mandatory .form-label:first-child:after {
+      content: ' *';
+      color: $form-feedback-invalid-color;
+    }
+
+    &.is-invalid * {
+      color: $form-feedback-invalid-color;
+      border-color: $form-feedback-invalid-color;
+    }
+}
+.form-control {
+    & ~ .form-control-icon {
+        top: .28rem;
+    }
+    &.form-control-lg {
+        padding: .55rem 1rem;
+        font-size: 1.05rem;
+        & ~ .form-control-icon {
+            top: .55rem;
+        }
+    }
+    &.form-control-xl {
+        padding: .85rem 1rem;
+        font-size: 1.2rem;
+        & ~ .form-control-icon {
+            top: .55rem;
+        }
+    }
+}
+.form-check {
+    .form-check-input {
+		border-width: 2px;
+		border-color: $primary;
+        &[class*="bg-"] {
+            border: 0;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+        @each $key, $value in $theme-colors {
+            &.form-check-#{$key} {
+                background-color: $value;
+                border-color: $value;
+
+                &:not(:checked) {
+                    background-color: transparent;
+                    border: 2px solid $value;
+                }
+
+                &.form-check-glow {
+                    box-shadow: 0 0 5px lighten($value,10%);
+                    &:not(:checked) {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &.form-check-sm {
+        .form-check-input {
+            width: .9rem;
+            height: .9rem;
+            margin-top: .3em;
+        }
+        label {
+            font-size: .7rem;
+            
+        }
+    }
+    &.form-check-lg {
+        .form-check-input {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-top: .3em;
+        }
+        label {
+            font-size: 1rem;
+        }
+    }
+
+    @each $key, $value in $theme-colors {
+        &.form-check-#{$key} {
+            .form-check-input {
+                background-color: $value;
+                border-color: $value
+            }
+        }
+    }
+}
+
+
+// Vendor: Choices
+.choices__inner {
+    background-color: $choices-bg;
+    border-color: $choices-border-color;
+}
+.choices__input {
+    background-color: $choices-bg !important;
+    color: $choices-input-color;
+}
+.choices__list {
+    background-color: $choices-dropdown-bg;
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background-color: $choices-highlight-bg;
+}
+.input-group .input-group-prepend > * {
+	border-radius: 8px 0px 0px 8px;
+	border-width: 2px;
+	border-color: $primary;
+	color: $primary;
+	border-right: none;
+}
+.input-group input:not(:last-child), .input-group select:not(:last-child){
+	border-right: none;
+}
+ 
+.input-group > :first-child:is(.input-group-text), .input-group > :first-child:is(.input-group-text) + .input-group-text {
+	border-radius: 8px 0px 0px 8px;
+	border-width: 2px;
+	border-color: $primary;
+	color: $primary;
+	border-right: none;
+}
+
+
+.input-group input~.input-group-text:not(:last-child), .input-group select~.input-group-text:not(:last-child) {
+	border-radius: 8px 0px 0px 8px;
+	border-width: 2px;
+	border-color: $primary;
+	color: $primary;
+	border-right: none;
+}
+.input-group input~.input-group-text:last-child,.input-group select~.input-group-text:last-child{
+	border-radius: 0px 8px 8px 0px;
+	border: 2px solid $primary;
+	color: $primary;
+}
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){
+	margin-left: 0px;
+	// border-left: none;
+}
+.input-group > input:last-child{
+	border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+}
+.input-group > button:first-child{
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-width: 2px;
+	border-right: none;
+}
+.input-group > button:last-child{
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-width: 2px;
+}
+.input-group-text{
+	background-color: #efefef;
+	border-color: $primary;
+}
+.form-group[class*="has-icon-"] .form-control-icon i, .form-group[class*="has-icon-"] .form-control-icon svg {
+	color: $primary;
+}
+.form-group[class*="has-icon-"] .form-control.form-control-xl ~ .form-control-icon i::before {
+	color: $primary;
+}

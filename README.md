@@ -20,13 +20,21 @@ Every element of Brutopia has been carefully crafted to ensure optimal legibilit
 The deliberate use of minimalistic typography, generous whitespace, and striking color contrasts creates a visually engaging experience that captivates your visitors' attention. Embrace the unique charm of neo-brutalism while prioritizing readability with Brutopia and redefine the way your audience engages with your website.
 
 
-## Installation
+## How to use
 
 Instead of Using the default bootstrap CSS include the below CSS file 
 
 
 ```html
 <link href="https://cdn.jsdelivr.net/gh/rajnandan1/brutopia@latest/dist/assets/compiled/css/app.css" rel="stylesheet" crossorigin="anonymous">
+```
+
+## Development
+
+```
+npm i
+npx webpack
+node preview.js
 ```
 
 Rest everything is same

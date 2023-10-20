@@ -1,0 +1,18 @@
+@import "./scss/variables";
+
+// Bootstrap + Icons
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Fix icon placement
+body .bi::before, [class^=bi-]::before, [class*=" bi-"]::before {
+    vertical-align: sub;
+}
+
+// Import fonts
+@import "./scss//fonts";
+
+// Perfect Scrollbar
+// @import "~perfect-scrollbar/css/perfect-scrollbar.css";
+
+// brutopia CSS
+@import "./scss/brutopia";

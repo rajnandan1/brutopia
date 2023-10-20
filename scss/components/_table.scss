@@ -1,0 +1,26 @@
+.table td, .table thead th {
+    vertical-align: middle !important;
+}
+
+.table:not(.table-borderless) thead th {
+    border-bottom: 1px solid $primary !important;
+}
+
+.table {
+    &.table-sm {
+        tr td, tr th {
+            padding: 1rem;
+        }
+    }
+    &.table-md {
+        tr td, tr th {
+            padding: 1rem;
+        }
+    }
+    &.table-lg {
+        tr td, tr th {
+            padding: 1.3rem;
+        }
+    }
+}
+ 

@@ -1,0 +1,38 @@
+.divider {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+	font-size: 1.2rem;
+    margin: 1rem 0;
+    .divider-text {
+        position: relative;
+        display: inline-block;
+        padding: 0 1rem;
+        background-color: $divider-text-bg;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 9999px;
+            border-top: 2px solid $divider-bg;
+        }
+        &:before {
+            right: 100%;
+        }
+        &:after {
+            left: 100%;
+        }
+    }
+    &.divider-left .divider-text {
+        float: left;
+    }
+    &.divider-left-center .divider-text {
+        left: -25%;
+    }
+    &.divider-right-center .divider-text {
+        left: 25%;
+    }
+    &.divider-right .divider-text {
+        float: right;
+    }
+}

@@ -1,0 +1,14 @@
+# add node modules
+/vscode
+.DS_Store
+/node_modules
+
+# ignore code scanning from package-lock
+package-lock.json
+
+dist.zip
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
+dist/*
