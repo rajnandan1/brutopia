@@ -1,0 +1,78 @@
+name: Build and validate CSS
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/build-css.yml"
+      - "dist/assets/compiled/css/app.css"
+      - "package.json"
+      - "scripts/check-cdn-css.js"
+      - "scss/**"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/build-css.yml"
+      - "package.json"
+      - "scripts/check-cdn-css.js"
+      - "scss/**"
+
+jobs:
+  verify-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build app.css
+        run: npm run build
+
+      - name: Validate CDN stylesheet contract
+        run: npm run check:cdn-css
+
+  update-cdn-css:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]'
+    needs: verify-build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build app.css
+        run: npm run build
+
+      - name: Validate CDN stylesheet contract
+        run: npm run check:cdn-css
+
+      - name: Commit compiled CDN stylesheet
+        run: |
+          if git diff --quiet -- dist/assets/compiled/css/app.css; then
+            echo "No CDN stylesheet changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/assets/compiled/css/app.css
+          git commit -m "chore: update compiled CDN stylesheet [skip ci]"
+          git push

@@ -538,8 +538,8 @@ $gutters: $spacers !default;
 
 $grid-gutter-width: 20px; // Adjust this value to your specific grid gutter width
 
-// Calculate $container-padding-x directly
-$container-padding-x: $grid-gutter-width / 2 !default;
+// Keep container gutter aligned with row gutter to avoid horizontal overflow.
+$container-padding-x: $grid-gutter-width !default;
 
 
 // Components
