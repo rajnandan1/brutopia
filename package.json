@@ -6,7 +6,9 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "nodemon --watch scss/ --exec 'npx webpack && node preview.js'",
-        "build-scss": "node-sass ./scss/app.scss ./dist/assets/compiled/css/app.css"
+        "build-scss": "node-sass ./scss/app.scss ./dist/assets/compiled/css/app.css",
+        "build": "npm run build-scss",
+        "check:cdn-css": "node scripts/check-cdn-css.js"
     },
     "repository": {
         "type": "git",

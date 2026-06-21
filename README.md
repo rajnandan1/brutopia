@@ -33,9 +33,9 @@ Instead of Using the default bootstrap CSS include the below CSS file
 
 ```
 npm i
-npx webpack
+npm run build
+npm run check:cdn-css
 node preview.js
 ```
 
 Rest everything is same
-
